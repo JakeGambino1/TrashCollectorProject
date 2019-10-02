@@ -103,5 +103,5 @@ C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashColl
 C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.csproj.CopyComplete
 C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.dll
 C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.pdb
-C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.initial.resources
+C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.updatedModels.resources
 C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.csproj.GenerateResource.cache
