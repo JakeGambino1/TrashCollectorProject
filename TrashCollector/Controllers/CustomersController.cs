@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,29 +14,35 @@ namespace TrashCollector.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            return View();
+            var listOfCustomers = db.Customers.ToList();
+            return View(listOfCustomers); //details view
         }
 
         // GET: Customers/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Customer customer = db.Customers.Where(c => c.Id == id).SingleOrDefault();
+            return View(customer);
         }
 
         // GET: Customers/Create
         public ActionResult Create()
         {
-            return View();
+            Customer customer = new Customer();
+            return View(customer);
         }
 
         // POST: Customers/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Customer customer)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                string currentUserId = User.Identity.GetUserId();
+                customer.ApplicationId = currentUserId;
+                db.Customers.Add(customer);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
@@ -47,17 +54,25 @@ namespace TrashCollector.Controllers
         // GET: Customers/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Customer customer = db.Customers.Where(c => c.Id == id).SingleOrDefault();
+            //customer.ApplicationUser = 
+            return View(customer);
         }
 
         // POST: Customers/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Customer customer)
         {
             try
             {
-                // TODO: Add update logic here
-
+                Customer editCustomer = db.Customers.Find(id);
+                editCustomer.FirstName = customer.FirstName;
+                editCustomer.LastName = customer.LastName;
+                editCustomer.StreetAddress = customer.StreetAddress;
+                editCustomer.CityName = customer.CityName;
+                editCustomer.StateName = customer.StateName;
+                editCustomer.ZipCode = customer.ZipCode;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
@@ -69,17 +84,19 @@ namespace TrashCollector.Controllers
         // GET: Customers/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Customer customer = db.Customers.Where(c => c.Id == id).SingleOrDefault();
+            return View(customer);
         }
 
         // POST: Customers/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, Customer customer)
         {
             try
             {
                 // TODO: Add delete logic here
-
+                db.Customers.Remove(db.Customers.Find(id));
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
