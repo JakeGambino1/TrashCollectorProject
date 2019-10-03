@@ -73,7 +73,7 @@ namespace TrashCollector.Controllers
                 editCustomer.StateName = customer.StateName;
                 editCustomer.ZipCode = customer.ZipCode;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Customers", new { id = editCustomer.Id });
             }
             catch
             {
