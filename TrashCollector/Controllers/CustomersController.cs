@@ -10,12 +10,17 @@ namespace TrashCollector.Controllers
 {
     public class CustomersController : Controller
     {
-        ApplicationDbContext db = new ApplicationDbContext();
+        ApplicationDbContext db;
+
+        public CustomersController()
+        {
+            db = new ApplicationDbContext();
+        }
         // GET: Customers
         public ActionResult Index()
         {
-            var listOfCustomers = db.Customers.ToList();
-            return View(listOfCustomers); //details view
+            var listOfCustomers = db.Customers;
+            return View(listOfCustomers);
         }
 
         // GET: Customers/Details/5
@@ -55,7 +60,6 @@ namespace TrashCollector.Controllers
         public ActionResult Edit(int id)
         {
             Customer customer = db.Customers.Where(c => c.Id == id).SingleOrDefault();
-            //customer.ApplicationUser = 
             return View(customer);
         }
 
