@@ -43,7 +43,7 @@ namespace TrashCollector.Controllers
                 customer.ApplicationId = currentUserId;
                 db.Customers.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("Details");
+                return RedirectToAction("Details", "Customers", new { id = customer.Id });
             }
             catch
             {
