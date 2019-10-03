@@ -18,6 +18,10 @@ namespace TrashCollector.Models
         public string StateName { get; set; }
         public int ZipCode { get; set; }
         public double OutstandingBalance { get; set; }
+        public string WeeklyPickupDay { get; set; }
+        public string OneTimePickupDate { get; set; }
+        public string SuspendPickupStart { get; set; }
+        public string SuspendPickupStop { get; set; }
         [ForeignKey("ApplicationUser")]
         public string ApplicationId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
