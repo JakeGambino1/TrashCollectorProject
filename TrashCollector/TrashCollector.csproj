@@ -203,6 +203,10 @@
     <Compile Include="Migrations\201910041300405_addedDisplayNameForCustomerProp.Designer.cs">
       <DependentUpon>201910041300405_addedDisplayNameForCustomerProp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910041557139_AddedPickupBoolForCustomer.cs" />
+    <Compile Include="Migrations\201910041557139_AddedPickupBoolForCustomer.Designer.cs">
+      <DependentUpon>201910041557139_AddedPickupBoolForCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -316,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910041300405_addedDisplayNameForCustomerProp.resx">
       <DependentUpon>201910041300405_addedDisplayNameForCustomerProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910041557139_AddedPickupBoolForCustomer.resx">
+      <DependentUpon>201910041557139_AddedPickupBoolForCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
