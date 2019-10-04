@@ -187,6 +187,10 @@
     <Compile Include="Migrations\201910031646560_AddedPickupOptionsForCustomer.Designer.cs">
       <DependentUpon>201910031646560_AddedPickupOptionsForCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910040145477_updatedCustomerProperties.cs" />
+    <Compile Include="Migrations\201910040145477_updatedCustomerProperties.Designer.cs">
+      <DependentUpon>201910040145477_updatedCustomerProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -284,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910031646560_AddedPickupOptionsForCustomer.resx">
       <DependentUpon>201910031646560_AddedPickupOptionsForCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910040145477_updatedCustomerProperties.resx">
+      <DependentUpon>201910040145477_updatedCustomerProperties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
