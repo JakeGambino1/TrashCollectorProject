@@ -76,6 +76,10 @@ namespace TrashCollector.Controllers
                 editCustomer.CityName = customer.CityName;
                 editCustomer.StateName = customer.StateName;
                 editCustomer.ZipCode = customer.ZipCode;
+                editCustomer.OneTimePickupDate = customer.OneTimePickupDate;
+                editCustomer.WeeklyPickupDay = customer.WeeklyPickupDay;
+                editCustomer.SuspendPickupStart = customer.SuspendPickupStart;
+                editCustomer.SuspendPickupStop = customer.SuspendPickupStop;
                 db.SaveChanges();
                 return RedirectToAction("Details", "Customers", new { id = editCustomer.Id });
             }
