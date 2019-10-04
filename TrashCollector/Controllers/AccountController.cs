@@ -171,7 +171,7 @@ namespace TrashCollector.Controllers
                     }
                     else if (model.UserRoles == "Employee")
                     {
-                        return RedirectToAction("Index", "Employees");
+                        return RedirectToAction("Create", "Employees");
                     }
                 }
                 ViewBag.Name = new SelectList(db.Roles.Where(u => !u.Name.Contains("Admin")).ToList(), "Name", "Name");
