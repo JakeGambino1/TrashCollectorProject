@@ -108,3 +108,5 @@ C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashColl
 C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.AddedBalanceToCustomer.resources
 C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.AddedPickupOptionsForCustomer.resources
 C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.updatedCustomerProperties.resources
+C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.formattingDateForCustomerProperties.resources
+C:\Users\jakeg\Desktop\devCodeCamp\Week8\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.RemovedBadChange.resources

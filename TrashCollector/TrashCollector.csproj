@@ -191,6 +191,14 @@
     <Compile Include="Migrations\201910040145477_updatedCustomerProperties.Designer.cs">
       <DependentUpon>201910040145477_updatedCustomerProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910041202382_formattingDateForCustomerProperties.cs" />
+    <Compile Include="Migrations\201910041202382_formattingDateForCustomerProperties.Designer.cs">
+      <DependentUpon>201910041202382_formattingDateForCustomerProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910041215576_RemovedBadChange.cs" />
+    <Compile Include="Migrations\201910041215576_RemovedBadChange.Designer.cs">
+      <DependentUpon>201910041215576_RemovedBadChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -291,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910040145477_updatedCustomerProperties.resx">
       <DependentUpon>201910040145477_updatedCustomerProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910041202382_formattingDateForCustomerProperties.resx">
+      <DependentUpon>201910041202382_formattingDateForCustomerProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910041215576_RemovedBadChange.resx">
+      <DependentUpon>201910041215576_RemovedBadChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
