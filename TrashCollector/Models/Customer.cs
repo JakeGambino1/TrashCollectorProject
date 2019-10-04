@@ -21,13 +21,12 @@ namespace TrashCollector.Models
         public double OutstandingBalance { get; set; }
         [DisplayName("Select your pickup day")]
         public string WeeklyPickupDay { get; set; }
-        public bool pickupCompleted { get; set; }
+        public bool PickupCompleted { get; set; }
         public string OneTimePickupDate { get; set; }
         public string SuspendPickupStart { get; set; }
         public string SuspendPickupStop { get; set; }
         [ForeignKey("ApplicationUser")]
         public string ApplicationId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
-
     }
 }

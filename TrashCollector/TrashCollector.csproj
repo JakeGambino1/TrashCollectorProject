@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201910041557139_AddedPickupBoolForCustomer.Designer.cs">
       <DependentUpon>201910041557139_AddedPickupBoolForCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910041607142_FixedPickupPropertyToBestPractice.cs" />
+    <Compile Include="Migrations\201910041607142_FixedPickupPropertyToBestPractice.Designer.cs">
+      <DependentUpon>201910041607142_FixedPickupPropertyToBestPractice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -282,6 +286,7 @@
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Employees\Delete.cshtml" />
     <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\UpdatePickupStatus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -323,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910041557139_AddedPickupBoolForCustomer.resx">
       <DependentUpon>201910041557139_AddedPickupBoolForCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910041607142_FixedPickupPropertyToBestPractice.resx">
+      <DependentUpon>201910041607142_FixedPickupPropertyToBestPractice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

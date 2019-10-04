@@ -41,6 +41,7 @@ namespace TrashCollector.Controllers
             return View(employee);
         }
 
+
         // POST: Employees/Create
         [HttpPost]
         public ActionResult Create(Employee employee)
@@ -58,6 +59,23 @@ namespace TrashCollector.Controllers
             {
                 return View();
             }
+        }
+        // GET: Customer/Update Status
+        public ActionResult UpdatePickupStatus(int id)
+        {
+            Customer customer = db.Customers.Where(c => c.Id == id).SingleOrDefault();
+            return View(customer);
+        }
+
+        // POST: Customer/Update Status
+        [HttpPost]
+        public ActionResult UpdatePickupStatus(Customer customer)
+        {
+            var editCustomer = db.Customers.Find(customer.Id);
+            editCustomer.PickupCompleted = true;
+            editCustomer.OutstandingBalance += 50;
+            db.SaveChanges();
+            return RedirectToAction("Index", "Employees");
         }
 
         // GET: Employees/Edit/5
