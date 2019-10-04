@@ -22,7 +22,7 @@ namespace TrashCollector.Controllers
         {
             var myId = User.Identity.GetUserId();
             Employee employeeLoggedIn = db.Employees.Where(e => e.ApplicationId == myId).SingleOrDefault();
-            var customersInMyArea = db.Customers.Where(c => c.ZipCode == employeeLoggedIn.ZipCode);
+            var customersInMyArea = db.Customers.Where(c => c.ZipCode == employeeLoggedIn.ZipCode && c.WeeklyPickupDay == DateTime.Today.DayOfWeek.ToString());
             //var customersInArea = db.Customers.Where(c => c.ZipCode == db.Employees.Where(e => e.ApplicationId == myId).SingleOrDefault().ZipCode))
             return View(customersInMyArea);
         }
