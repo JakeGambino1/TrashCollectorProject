@@ -199,6 +199,10 @@
     <Compile Include="Migrations\201910041215576_RemovedBadChange.Designer.cs">
       <DependentUpon>201910041215576_RemovedBadChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910041300405_addedDisplayNameForCustomerProp.cs" />
+    <Compile Include="Migrations\201910041300405_addedDisplayNameForCustomerProp.Designer.cs">
+      <DependentUpon>201910041300405_addedDisplayNameForCustomerProp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -270,6 +274,10 @@
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -305,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910041215576_RemovedBadChange.resx">
       <DependentUpon>201910041215576_RemovedBadChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910041300405_addedDisplayNameForCustomerProp.resx">
+      <DependentUpon>201910041300405_addedDisplayNameForCustomerProp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

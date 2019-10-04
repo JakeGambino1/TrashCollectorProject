@@ -11,12 +11,21 @@ namespace TrashCollector.Controllers
     public class EmployeesController : Controller
     {
 
-        ApplicationDbContext db = new ApplicationDbContext();
+        ApplicationDbContext db;
+        public EmployeesController()
+        {
+            db = new ApplicationDbContext();
+        }
+
         // GET: Employees
         public ActionResult Index()
         {
-            var listOfEmployees = db.Employees.ToList();
-            return View(listOfEmployees);
+            var myId = User.Identity.GetUserId();
+            Employee employeeLoggedIn = db.Employees.Where(e => e.ApplicationId == myId).SingleOrDefault();
+            var customers = db.Customers;
+            var customersInMyArea = customers.Where(c => c.ZipCode == employeeLoggedIn.ZipCode);
+            //var customersInArea = db.Customers.Where(c => c.ZipCode == db.Employees.Where(e => e.ApplicationId == myId).SingleOrDefault().ZipCode))
+            return View(customersInMyArea);
         }
 
         // GET: Employees/Details/5
@@ -92,7 +101,7 @@ namespace TrashCollector.Controllers
             try
             {
                 // TODO: Add delete logic here
-                db.Employees.Remove(db.Customers.Find(id));
+                db.Employees.Remove(db.Employees.Find(id));
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

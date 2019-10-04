@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace TrashCollector.Models
         public string StateName { get; set; }
         public int ZipCode { get; set; }
         public double OutstandingBalance { get; set; }
+        [DisplayName("Select your pickup day")]
         public string WeeklyPickupDay { get; set; }
         public string OneTimePickupDate { get; set; }
         public string SuspendPickupStart { get; set; }
