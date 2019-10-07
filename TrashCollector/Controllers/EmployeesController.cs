@@ -10,7 +10,6 @@ namespace TrashCollector.Controllers
 {
     public class EmployeesController : Controller
     {
-
         ApplicationDbContext db;
         public EmployeesController()
         {
@@ -41,7 +40,6 @@ namespace TrashCollector.Controllers
             return View(employee);
         }
 
-
         // POST: Employees/Create
         [HttpPost]
         public ActionResult Create(Employee employee)
@@ -60,6 +58,7 @@ namespace TrashCollector.Controllers
                 return View();
             }
         }
+
         // GET: Customer/Update Status
         public ActionResult UpdatePickupStatus(int id)
         {
