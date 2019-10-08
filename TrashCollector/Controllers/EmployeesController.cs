@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml.Linq;
 using TrashCollector.Models;
 
 namespace TrashCollector.Controllers
@@ -21,7 +23,7 @@ namespace TrashCollector.Controllers
         {
             var myId = User.Identity.GetUserId();
             Employee employee = db.Employees.Where(e => e.ApplicationId == myId).SingleOrDefault();
-            var customersInMyArea = db.Customers.Where(c => c.ZipCode == employee.ZipCode && c.WeeklyPickupDay == DateTime.Today.DayOfWeek.ToString());
+            var customersInMyArea = db.Customers.Where(c => c.ZipCode == employee.ZipCode && c.WeeklyPickupDay == DateTime.Today.DayOfWeek.ToString() && c.PickupCompleted == false);
             //var customersInArea = db.Customers.Where(c => c.ZipCode == db.Employees.Where(e => e.ApplicationId == myId).SingleOrDefault().ZipCode && c.WeeklyPickupDay == DateTime.Today.DayOfWeek.ToString()))
             return View(customersInMyArea);
         }
@@ -70,6 +72,18 @@ namespace TrashCollector.Controllers
         [HttpPost]
         public ActionResult UpdatePickupStatus(Customer customer)
         {
+            //string address = $"{customer.StreetAddress} {customer.CityName}, {customer.StateName} {customer.ZipCode}";
+            //string requestUri = string.Format("http://maps.googleapis.com/maps/api/geocode/xml?address={0}&sensor=false", Uri.EscapeDataString(address));
+
+            //WebRequest request = WebRequest.Create(requestUri);
+            //WebResponse response = request.GetResponse();
+            //XDocument xdoc = XDocument.Load(response.GetResponseStream());
+
+            //XElement result = xdoc.Element("GeocodeResponse").Element("result");
+            //XElement locationElement = result.Element("geometry").Element("location");
+            //XElement lat = locationElement.Element("lat");
+            //XElement lng = locationElement.Element("lng");
+
             var editCustomer = db.Customers.Find(customer.Id);
             editCustomer.PickupCompleted = true;
             editCustomer.OutstandingBalance += 50;
